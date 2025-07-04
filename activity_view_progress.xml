@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progress_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- ONE direct child -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logotwo"
+            android:contentDescription="@string/app_name"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvProgressLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_view_progress"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Progress bar -->
+        <FrameLayout
+            android:id="@+id/barContainer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:id="@+id/llSegments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Min Goal -->
+                <TextView
+                    android:id="@+id/tvMinGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/progress_min"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:padding="4dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Max Goal -->
+                <TextView
+                    android:id="@+id/tvMaxGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/progress_max"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:padding="4dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Over Limit -->
+                <TextView
+                    android:id="@+id/tvOverLimit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/progress_over"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:padding="4dp"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+            <!-- Big arrow -->
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="-25dp"
+                android:src="@drawable/ic_arrow_down"
+                android:contentDescription="@string/desc_spent_marker"
+             />
+        </FrameLayout>
+
+        <!-- Summary below -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/tvSummaryMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Min goal = R0.00"/>
+
+            <TextView
+                android:id="@+id/tvSummaryMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Max goal = R0.00"/>
+
+            <TextView
+                android:id="@+id/tvSummarySpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Total spent = R0.00"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

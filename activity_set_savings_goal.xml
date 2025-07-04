@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvSavingsGoalTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set a Savings Goal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Goal Name -->
+        <EditText
+            android:id="@+id/etGoalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Goal name (e.g. Vacation)"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Target Amount -->
+        <EditText
+            android:id="@+id/etTargetAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target amount"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Optional Deadline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deadline:"/>
+        <Button
+            android:id="@+id/btnPickDeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select date"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveSavingsGoal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="SAVE GOAL"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Checklist Label -->
+        <TextView
+            android:id="@+id/tvChecklistLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Goal Checklist"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Goals List -->
+        <LinearLayout
+            android:id="@+id/llGoalsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+            <!-- Programmatically add items here: each row has a CheckBox and details -->
+        </LinearLayout>
+
+        <!-- Goal Accomplished Button -->
+        <Button
+            android:id="@+id/btnGoalAccomplished"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="GOAL ACCOMPLISHED"/>
+
+    </LinearLayout>
+</ScrollView>

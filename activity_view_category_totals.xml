@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- App logo at top -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="346dp"
+        android:layout_height="91dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logotwo" />
+
+    <!-- Heading under logo -->
+    <TextView
+        android:id="@+id/tvTotalsHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the start and end period to view total amounts:"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Date-pickers row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnStartDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Start Date"/>
+
+        <Button
+            android:id="@+id/btnEndDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="End Date"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Load Totals -->
+    <Button
+        android:id="@+id/btnLoadTotals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Totals"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Results list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategoryTotals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"/>
+
+</LinearLayout>

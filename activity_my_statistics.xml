@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    tools:ignore="ButtonStyle,TooWide">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgStatsLogo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logotwo"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Main Heading -->
+        <TextView
+            android:id="@+id/tvStatsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_statistics"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvStatsSubheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_dates_instruction"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Date Range Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/btnStatsStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/start_date"/>
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/btnStatsEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/end_date"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Enter Button Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStatsEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Chart Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chartCategoryTotals"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

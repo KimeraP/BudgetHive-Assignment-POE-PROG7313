@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signup_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- 0) Full-screen GIF, hidden until signup succeeds -->
+    <ImageView
+        android:id="@+id/ivSignupGif"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 1) Logo at the top -->
+    <ImageView
+        android:id="@+id/imgSignupLogo"
+        android:layout_width="288dp"
+        android:layout_height="83dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logotwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 2) Heading below the logo -->
+    <TextView
+        android:id="@+id/tvSignupHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome to BudgetHive"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imgSignupLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 3) Subtitle -->
+    <TextView
+        android:id="@+id/tvSignupSubheading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ready to sign up? Please enter all your details below:"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSignupHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 4) Name -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/tvSignupSubheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 5) Surname -->
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_surname"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 6) Cell Number -->
+    <EditText
+        android:id="@+id/etCellNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_cell_number"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/etSurname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 7) Email -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/etCellNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 8) Current Balance -->
+    <EditText
+        android:id="@+id/etCurrentBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_current_balance"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 9) Password -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etCurrentBalance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 10) Confirm Password -->
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_confirm_password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 11) Sign Up Button -->
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/action_sign_up"
+        app:layout_constraintTop_toBottomOf="@id/etConfirmPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

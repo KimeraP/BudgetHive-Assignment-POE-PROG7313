@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1) Full‐screen GIF background -->
+    <ImageView
+        android:id="@+id/ivGifBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        android:adjustViewBounds="true"/>
+
+    <!-- 2) Centered white panel -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <!-- 3) existing UI inside the panel -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:background="@android:color/white">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="290dp"
+                android:layout_height="93dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logotwo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Intro paragraph below the logo -->
+            <TextView
+                android:id="@+id/tvHomeDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="BudgetHive: Buzz Into Golden Savings\n\nWelcome to BudgetHive, the personal budgeting app that makes managing money as sweet as honey. Track every rand in your hive, set and smash golden goals, and unlock honey-pot rewards as you cultivate healthy savings habits. Join our buzzing community for real-time insights and friendly challenges, and turn your finances into a honeycomb of opportunity. Sign up now and let the buzz begin!"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/imgLogo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:text="Login"
+                app:layout_constraintTop_toBottomOf="@id/tvHomeDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="Sign Up"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
+

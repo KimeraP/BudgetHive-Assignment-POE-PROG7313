@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BudgetHive"
+        tools:targetApi="31">
+
+        <!-- FileProvider for camera capture -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Launcher -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Other screens -->
+        <activity android:name=".LoginActivity"              android:exported="true"/>
+        <activity android:name=".SignupActivity"             android:exported="true"/>
+        <activity android:name=".DashboardActivity"          android:exported="true"/>
+        <activity android:name=".MainActivity"               android:exported="true"/>
+        <activity android:name=".CategoryActivity"           android:exported="true"/>
+        <activity android:name=".ExpenseEntryActivity"       android:exported="true"/>
+        <activity android:name=".SetMonthlyGoalActivity"     android:exported="true"/>
+        <activity android:name=".ViewEntriesActivity"        android:exported="true"/>
+        <activity android:name=".ViewCategoryTotalsActivity" android:exported="true"/>
+        <activity android:name=".MyStatisticsActivity"       android:exported="true"/>
+        <activity android:name=".ViewProgressActivity"       android:exported="true"/>
+        <activity android:name=".SetSavingsGoalActivity"     android:exported="true"/>
+        <activity
+            android:name=".ExpenseClassificationActivity"
+            android:label="Expense Classification"
+            android:exported="false" />
+
+    </application>
+</manifest>

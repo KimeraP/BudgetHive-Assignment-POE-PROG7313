@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">BudgetHive</string>
+
+        <string name="hint_name">Name</string>
+        <string name="hint_surname">Surname</string>
+        <string name="hint_cell_number">Cell Number</string>
+        <string name="hint_email">Email</string>
+        <string name="hint_current_balance">Available Current Balance</string>
+        <string name="hint_password">Password</string>
+        <string name="hint_confirm_password">Confirm Password</string>
+        <string name="action_sign_up">Sign Up</string>
+        <string name="action_create_category">Create Category</string>
+
+
+    <string name="action_create_expense">Create Expense Entry</string>
+
+
+        <string name="action_set_monthly_goal">Set Monthly Goal</string>
+        <string name="action_view_entries">View All Expense Entries</string>
+        <string name="action_view_total">View Total Amount Spent</string>
+    <string name="action_view_statistics">View My Statistics</string>
+
+
+
+        <string name="my_statistics">My Statistics</string>
+        <string name="enter_dates_instruction">Please enter dates to view amounts spent per category:</string>
+        <string name="start_date">Start Date</string>
+        <string name="end_date">End Date</string>
+        <string name="enter">Enter</string>
+
+    <string name="action_view_progress">View My Progress</string>
+
+
+        <string name="label_view_progress">View My Monthly Progress</string>
+        <string name="min_goal_default">Min: R0</string>
+        <string name="max_goal_default">Max: R0</string>
+        <string name="desc_spent_marker">Spent marker arrow</string>
+    <string name="over_limit_default">Over: R0</string>
+
+
+
+
+
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+
+            <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="352dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logotwo" />
+
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter the following details to add an expense:"/>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Description"
+            android:inputType="text" />
+
+        <!-- Amount -->
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"/>
+        <Button
+            android:id="@+id/btnPickDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select date"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Start time picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start time:"/>
+        <Button
+            android:id="@+id/btnPickStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select start"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- End time picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End time:"/>
+        <Button
+            android:id="@+id/btnPickEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select end"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Category spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category:"/>
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Camera capture -->
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take Photo"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Photo attach -->
+        <Button
+            android:id="@+id/btnAttachPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attach photo"
+            android:layout_marginBottom="8dp"/>
+        <ImageView
+            android:id="@+id/ivPhotoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Save -->
+        <Button
+            android:id="@+id/btnSaveEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Expense"/>
+
+    </LinearLayout>
+</ScrollView>

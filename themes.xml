@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme: uses MaterialComponents and no action bar -->
+    <style name="Theme.BudgetHive" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your colors here if desired -->
+        <!--
+        <item name="colorPrimary">@color/your_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/your_accent</item>
+        <item name="android:windowBackground">@color/white</item>
+        -->
+    </style>
+
+</resources>
